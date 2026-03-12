@@ -91,13 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.background = '#10b981';
                     contactForm.reset();
                     
-                    // Afficher le bouton du calendrier Google
-                    const calendarContainer = document.getElementById('calendarContainer');
-                    if (calendarContainer) {
-                        calendarContainer.style.display = 'block';
-                    }
-                    
-                    // Remise à zéro après 3 secondes (Optionnel, on peut le garder pour le bouton)
+                    // Remise à zéro après 3 secondes
                     setTimeout(() => {
                         btn.textContent = originalText;
                         btn.style.background = '';
