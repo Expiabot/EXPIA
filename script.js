@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.style.opacity = '0.8';
 
             // Webhook n8n integration
-            fetch('https://tynisha-spadiceous-maudie.ngrok-free.dev/webhook/2e6fcc03-a79a-4c7f-b7bb-a86c4c04dee4', {
+            fetch('??????????? URL WEBHOOK ??????????????', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
