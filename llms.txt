@@ -1,0 +1,23 @@
+# EXPIA
+
+> EXPIA est une agence française spécialisée en intelligence artificielle, basée dans le Morbihan (Bretagne). EXPIA conçoit, développe et intègre des solutions d'IA sur-mesure pour les entreprises : automatisation des processus, IA générative, analyse prédictive, audit et conseil.
+
+## Services
+
+- **Automatisation & IA Générative** : agents autonomes, LLMs personnalisés, pipelines RAG, automatisation de workflows complexes (n8n sur-mesure), chatbots et assistants intelligents, génération de contenu automatisée. Objectif : réduire les coûts et accélérer le time-to-market.
+- **Audit & Conseil en IA** : audit des processus, identification des gisements de productivité, feuille de route stratégique pour une adoption réussie de l'IA.
+- **Intégration & Solutions Sur Mesure** : intégration de l'IA aux outils existants (CRM, ERP, automatisations) sans bouleverser les processus métier.
+
+## Méthodologie
+
+Processus en 4 étapes : Découverte (analyse des besoins et données) → Conception (architecture et choix des modèles) → Développement (implémentation, fine-tuning, tests) → Déploiement (mise en production, monitoring, maintenance).
+
+## Technologies
+
+OpenAI, LangChain, Hugging Face, PyTorch, TensorFlow, Pinecone, LlamaIndex, n8n, Docker, Python, RAG, Agents IA, Fine-Tuning, Vector DBs, Stable Diffusion, TypeScript, Kubernetes.
+
+## Contact
+
+- Site : https://expia.fr
+- Localisation : Morbihan, France
+- Réponse sous 48h ouvrées via le formulaire de contact.
