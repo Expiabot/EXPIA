@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://expia.fr/sitemap.xml
