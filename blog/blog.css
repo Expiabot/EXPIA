@@ -252,6 +252,15 @@
   color: var(--text-muted);
 }
 
+.article-cta .btn-primary {
+  color: #fff;
+  text-decoration: none;
+}
+
+.article-cta .btn-primary:hover,
+.article-cta .btn-primary:visited {
+  color: #fff;
+}
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .blog-grid { grid-template-columns: 1fr; }
