@@ -859,6 +859,13 @@ section { padding: 7rem 0; position: relative; z-index: 1; }
 
 .contact-email:hover { color: var(--accent-blue); }
 
+.contact-phone {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--trans-fast);
+}
+.contact-phone:hover { color: var(--accent-blue); }
+
 /* Form */
 .contact-form { position: relative; }
 
