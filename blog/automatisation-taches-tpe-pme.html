@@ -23,35 +23,220 @@
     <meta name="twitter:description" content="Le guide complet pour automatiser les tâches répétitives de votre entreprise.">
     <meta name="twitter:image" content="https://expia.fr/og-image.jpg">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <!-- Grain Texture Overlay -->
+    <div class="grain"></div>
 
-    <!-- JSON-LD : Article + fil d'Ariane. Adapte les dates si besoin. -->
+    <!-- Ambient Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">EXPIA</a>
+            <nav class="nav-links">
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#processus">Processus</a>
+                <a href="../index.html#faq">FAQ</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <a href="../index.html#contact" class="btn btn-outline">
+                Démarrer un projet
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== ARTICLE ========== -->
+        <article class="article">
+            <div class="container article-container">
+
+                <!-- Fil d'ariane -->
+                <nav class="breadcrumb reveal" aria-label="Fil d'ariane">
+                    <a href="../index.html">Accueil</a>
+                    <span>/</span>
+                    <a href="index.html">Blog</a>
+                    <span>/</span>
+                    <span class="breadcrumb-current">Automatisation des tâches pour TPE et PME</span>
+                </nav>
+
+                <!-- En-tête -->
+                <header class="article-header reveal">
+                    <span class="section-tag">Guide complet</span>
+                    <h1 class="article-title">Automatisation des tâches pour TPE et PME : <span class="text-gradient">par où commencer</span></h1>
+                    <p class="article-lead">Devis, relances, e-mails, saisie : chaque semaine, les mêmes tâches reviennent et grignotent vos heures. L'automatisation permet de les confier à un système qui travaille pour vous, en silence. Voici le guide complet — quoi automatiser, comment s'y prendre, avec quels outils, et combien de temps vous pouvez réellement gagner.</p>
+                    <div class="article-meta">
+                        <span>Par EXPIA</span>
+                        <span class="meta-dot"></span>
+                        <time datetime="2026-06-02">2 juin 2026</time>
+                        <span class="meta-dot"></span>
+                        <span>9 min de lecture</span>
+                    </div>
+                </header>
+
+                <!-- Corps -->
+                <div class="article-body reveal">
+
+                    <p>Quand on dirige une TPE ou une PME, le temps est la ressource la plus rare. Une grande partie de vos journées part dans des tâches qui n'apportent aucune valeur directe : recopier des informations, renvoyer le même e-mail pour la dixième fois, relancer un client qui n'a pas répondu, mettre à jour un tableur. Ces tâches sont nécessaires, mais elles n'ont aucune raison de reposer sur vous.</p>
+
+                    <p>C'est exactement ce que l'automatisation prend en charge. Pas pour « ajouter de la technologie » par principe, mais pour vous rendre des heures. Ce guide fait le tour complet de la question : ce qu'est vraiment l'automatisation, par quelles tâches commencer, comment ça fonctionne concrètement, et comment mesurer ce que ça vous rapporte.</p>
+
+                    <h2>Qu'est-ce que l'automatisation des tâches, concrètement ?</h2>
+
+                    <p>Automatiser une tâche, c'est confier à un système le soin de l'exécuter à votre place, selon des règles que vous définissez une fois pour toutes. L'exemple le plus parlant : au lieu de surveiller manuellement quels devis n'ont pas reçu de réponse, un système le fait pour vous et envoie une relance polie au bout de trois jours — sans que vous ayez à y penser.</p>
+
+                    <p>L'automatisation moderne ne remplace pas vos outils. Elle les <strong>connecte</strong>. Votre boîte mail, votre logiciel de facturation, votre agenda, votre tableur : au lieu de fonctionner en silos qui vous obligent à faire le lien manuellement, ils communiquent entre eux. L'information circule toute seule.</p>
+
+                    <h2>Quelles tâches automatiser en priorité ?</h2>
+
+                    <p>Toutes les tâches ne se valent pas pour démarrer. Les meilleures candidates partagent trois caractéristiques : elles sont <strong>fréquentes</strong>, <strong>répétitives</strong>, et suivent des <strong>règles claires</strong>. Voici les familles les plus rentables à automatiser dans une petite entreprise.</p>
+
+                    <h3>Les devis et les relances commerciales</h3>
+                    <p>Générer un devis, l'envoyer, suivre s'il a été ouvert, relancer en l'absence de réponse : tout ce cycle peut être automatisé. C'est souvent la première automatisation qui change la vie d'un dirigeant, car elle touche directement au chiffre d'affaires.</p>
+
+                    <h3>Les e-mails et messages récurrents</h3>
+                    <p>Répondre aux mêmes questions, confirmer des rendez-vous, accuser réception d'une demande : ces échanges suivent presque toujours le même schéma. Ils peuvent être pré-rédigés, triés automatiquement, ou même rédigés par une IA qui s'adapte au contexte du message.</p>
+
+                    <h3>La saisie et le classement de documents</h3>
+                    <p>Recopier des données d'un endroit à un autre, classer des pièces jointes, mettre à jour une base : c'est le travail invisible qui grignote des heures sans qu'on s'en aperçoive. C'est aussi le plus simple à automatiser, car les règles y sont souvent évidentes.</p>
+
+                    <h2>Comment fonctionne une automatisation ?</h2>
+
+                    <p>Le principe est toujours le même : un <strong>déclencheur</strong> (un nouvel e-mail, un formulaire rempli, une date qui arrive), suivi d'une <strong>série d'actions</strong> (créer un document, envoyer un message, mettre à jour une fiche). Entre les deux, des outils comme <strong>n8n</strong> orchestrent le tout en se branchant sur vos logiciels existants, sans avoir à les remplacer.</p>
+
+                    <p>C'est là qu'intervient l'<strong>IA générative</strong>. Elle ajoute une couche de « jugement » à l'automatisation : rédiger une réponse adaptée plutôt qu'un texte figé, résumer un long message, trier une demande selon son urgence, qualifier un prospect. Des tâches qui exigeaient un cerveau humain et qui peuvent désormais être déléguées en partie. C'est la différence entre une simple automatisation et un véritable <strong>agent IA</strong>, capable de prendre des micro-décisions.</p>
+
+                    <h2>Par où commencer : la méthode en 4 étapes</h2>
+
+                    <p>Inutile de tout automatiser d'un coup — c'est l'erreur la plus courante, et celle qui fait échouer les projets. La bonne approche est progressive.</p>
+
+                    <h3>1. Observer</h3>
+                    <p>Pendant une semaine, notez les tâches que vous refaites à l'identique. Vous verrez vite revenir les mêmes coupables.</p>
+
+                    <h3>2. Choisir une seule tâche</h3>
+                    <p>Celle qui vous pèse le plus ou revient le plus souvent. Une victoire concrète vaut mieux qu'un grand chantier qui n'aboutit jamais.</p>
+
+                    <h3>3. Connecter vos outils</h3>
+                    <p>On crée les « ponts » entre vos logiciels pour que l'information circule sans copier-coller. Vous gardez vos outils, ils se mettent à coopérer.</p>
+
+                    <h3>4. Mesurer le temps gagné</h3>
+                    <p>Une automatisation utile se mesure : combien d'heures par semaine vous a-t-elle rendues ? C'est ce chiffre qui justifie d'aller plus loin.</p>
+
+                    <h2>Combien de temps (et d'argent) peut-on gagner ?</h2>
+
+                    <p>Une seule automatisation bien choisie fait souvent gagner <strong>2 à 5 heures par semaine</strong>. Sur une année, c'est plus de 100 heures récupérées — sans embaucher. Au-delà du temps, l'automatisation réduit les oublis (une relance n'est jamais ratée), accélère vos réponses clients, et fiabilise vos processus. Pour savoir si le jeu en vaut la chandelle dans votre cas précis, un audit de vos processus permet d'identifier les gisements de temps les plus rentables.</p>
+
+                    <h2>Faut-il se faire accompagner ?</h2>
+
+                    <p>Vous pouvez tout à fait bricoler une première automatisation seul, et c'est une excellente façon de commencer. Mais faire appel à quelqu'un qui maîtrise ces outils permet d'aller plus vite, d'éviter les pièges classiques, et de concevoir des systèmes fiables qui tiennent dans le temps. EXPIA, basée à Férel, accompagne les TPE, PME et indépendants du sud Morbihan et de la presqu'île guérandaise, sur place ou en visio selon ce qui vous arrange.</p>
+
+                    <!-- FAQ intégrée -->
+                    <h2>Questions fréquentes</h2>
+                    <div class="article-faq">
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                Qu'est-ce que l'automatisation des tâches en entreprise ?
+                                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                            </summary>
+                            <div class="faq-answer"><p>L'automatisation des tâches consiste à confier à un système les actions répétitives que vous réalisez manuellement : relances, devis, classement, mises à jour. L'objectif est de libérer du temps sur les tâches à faible valeur pour le réinvestir dans votre métier.</p></div>
+                        </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                Quelles tâches une TPE ou PME peut-elle automatiser en premier ?
+                                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                            </summary>
+                            <div class="faq-answer"><p>Les tâches fréquentes, répétitives et à règles claires : relances de devis, confirmations de rendez-vous, réponses aux questions récurrentes, saisie de documents. Mieux vaut commencer par une seule, celle qui vous fait perdre le plus de temps.</p></div>
+                        </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                Faut-il savoir coder pour automatiser son entreprise ?
+                                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                            </summary>
+                            <div class="faq-answer"><p>Non. Les outils modernes comme n8n connectent vos logiciels existants sans développement lourd. EXPIA conçoit le système pour vous ; vous n'avez qu'à l'utiliser.</p></div>
+                        </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                Combien de temps peut-on gagner grâce à l'automatisation ?
+                                <span class="faq-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                            </summary>
+                            <div class="faq-answer"><p>Une seule automatisation bien choisie fait souvent gagner 2 à 5 heures par semaine, soit plus de 100 heures sur l'année — sans embauche supplémentaire.</p></div>
+                        </details>
+                    </div>
+
+                    <!-- Maillage interne (silo) -->
+                    <p style="margin-top:2.5rem;">À lire aussi : <a href="automatisation-ia-la-roche-bernard-sud-morbihan.html">Automatisation &amp; IA : par où commencer dans le sud Morbihan</a>.</p>
+
+                    <!-- CTA -->
+                    <div class="article-cta">
+                        <h2>Envie de savoir ce qui peut être automatisé chez vous ?</h2>
+                        <p>Un premier échange suffit pour identifier la tâche la plus rentable à automatiser dans votre entreprise. Sans engagement.</p>
+                        <a href="../index.html#contact" class="btn btn-primary glow-effect">
+                            Demander un échange gratuit
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <div class="logo">EXPIA</div>
+                <p>L'excellence en intelligence artificielle pour les entreprises de demain.</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="../index.html">Accueil</a>
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#processus">Processus</a>
+                <a href="index.html">Blog</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <div class="footer-bottom">
+                <p>© 2026 EXPIA. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <!-- ========== DONNÉES STRUCTURÉES ========== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Article",
+      "@type": "BlogPosting",
       "headline": "Automatisation des tâches pour TPE et PME : par où commencer",
       "description": "Le guide complet de l'automatisation des tâches pour les TPE et PME : quelles tâches automatiser, comment s'y prendre, quels outils, et combien de temps vous pouvez gagner.",
       "image": "https://expia.fr/og-image.jpg",
       "datePublished": "2026-06-02",
       "dateModified": "2026-06-02",
-      "author": { "@type": "Organization", "name": "EXPIA", "url": "https://expia.fr" },
+      "author": { "@type": "Organization", "name": "EXPIA", "url": "https://expia.fr/" },
       "publisher": {
         "@type": "Organization",
         "name": "EXPIA",
         "logo": { "@type": "ImageObject", "url": "https://expia.fr/og-image.jpg" }
       },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://expia.fr/blog/automatisation-taches-tpe-pme.html"
-      }
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://expia.fr/blog/automatisation-taches-tpe-pme.html" },
+      "about": ["Automatisation", "Intelligence artificielle", "Agent IA", "TPE", "PME", "n8n"]
     }
     </script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,6 +248,7 @@
       ]
     }
     </script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,230 +257,26 @@
         {
           "@type": "Question",
           "name": "Qu'est-ce que l'automatisation des tâches en entreprise ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "L'automatisation des tâches consiste à confier à un système informatique les actions répétitives que vous réalisez manuellement : envoyer des e-mails de relance, générer des devis, classer des documents, mettre à jour un tableur. L'objectif est de libérer du temps sur les tâches à faible valeur pour le réinvestir dans votre métier."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "L'automatisation des tâches consiste à confier à un système les actions répétitives que vous réalisez manuellement : relances, devis, classement, mises à jour. L'objectif est de libérer du temps sur les tâches à faible valeur pour le réinvestir dans votre métier." }
         },
         {
           "@type": "Question",
           "name": "Quelles tâches une TPE ou PME peut-elle automatiser en premier ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Les meilleures candidates sont les tâches fréquentes, répétitives et qui suivent des règles claires : relances de devis, confirmations de rendez-vous, réponses aux questions récurrentes, saisie et classement de documents. Il est conseillé de commencer par une seule automatisation, celle qui vous fait perdre le plus de temps."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Les tâches fréquentes, répétitives et à règles claires : relances de devis, confirmations de rendez-vous, réponses aux questions récurrentes, saisie de documents. Mieux vaut commencer par une seule, celle qui vous fait perdre le plus de temps." }
         },
         {
           "@type": "Question",
           "name": "Faut-il savoir coder pour automatiser son entreprise ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Non. Les outils d'automatisation modernes comme n8n permettent de connecter vos logiciels existants sans développement lourd. EXPIA conçoit et met en place le système pour vous ; vous n'avez qu'à l'utiliser au quotidien."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Non. Les outils modernes comme n8n connectent vos logiciels existants sans développement lourd. EXPIA conçoit le système pour vous ; vous n'avez qu'à l'utiliser." }
         },
         {
           "@type": "Question",
           "name": "Combien de temps peut-on gagner grâce à l'automatisation ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cela dépend des tâches automatisées, mais une seule automatisation bien choisie fait souvent gagner 2 à 5 heures par semaine. Sur une année, cela représente plus de 100 heures de temps récupéré, sans embauche supplémentaire."
-          }
+          "acceptedAnswer": { "@type": "Answer", "text": "Une seule automatisation bien choisie fait souvent gagner 2 à 5 heures par semaine, soit plus de 100 heures sur l'année — sans embauche supplémentaire." }
         }
       ]
     }
     </script>
-</head>
-<body>
-    <!-- Grain Texture Overlay -->
-    <div class="grain"></div>
-
-    <!-- ===== NAV (identique au gabarit article) ===== -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="https://expia.fr/index.html" class="nav-logo">EXPIA</a>
-            <div class="nav-links">
-                <a href="https://expia.fr/index.html#services">Services</a>
-                <a href="https://expia.fr/index.html#processus">Processus</a>
-                <a href="https://expia.fr/index.html#faq">FAQ</a>
-                <a href="https://expia.fr/index.html#contact">Contact</a>
-            </div>
-            <a href="https://expia.fr/index.html#contact" class="nav-cta">Démarrer un projet</a>
-        </div>
-    </nav>
-
-    <article class="blog-article">
-
-        <!-- Fil d'Ariane -->
-        <nav class="breadcrumb">
-            <a href="https://expia.fr/index.html">Accueil</a> /
-            <a href="https://expia.fr/blog/index.html">Blog</a> /
-            Automatisation des tâches pour TPE et PME
-        </nav>
-
-        <!-- En-tête -->
-        <header class="article-header">
-            <span class="article-tag">Guide complet</span>
-            <h1>Automatisation des tâches pour TPE et PME : par où commencer</h1>
-            <p class="article-intro">
-                Devis, relances, e-mails, saisie : chaque semaine, les mêmes tâches reviennent et grignotent vos heures. L'automatisation permet de les confier à un système qui travaille pour vous, en silence. Voici le guide complet — quoi automatiser, comment s'y prendre, avec quels outils, et combien de temps vous pouvez réellement gagner.
-            </p>
-            <div class="article-meta">
-                <span>Par EXPIA</span>
-                <span>2 juin 2026</span>
-                <span>9 min de lecture</span>
-            </div>
-        </header>
-
-        <!-- Corps -->
-        <div class="article-body">
-
-            <p>
-                Quand on dirige une TPE ou une PME, le temps est la ressource la plus rare. Une grande partie de vos journées part dans des tâches qui n'apportent aucune valeur directe : recopier des informations, renvoyer le même e-mail pour la dixième fois, relancer un client qui n'a pas répondu, mettre à jour un tableur. Ces tâches sont nécessaires, mais elles n'ont aucune raison de reposer sur vous.
-            </p>
-            <p>
-                C'est exactement ce que l'automatisation prend en charge. Pas pour « ajouter de la technologie » par principe, mais pour vous rendre des heures. Ce guide fait le tour complet de la question : ce qu'est vraiment l'automatisation, par quelles tâches commencer, comment ça fonctionne concrètement, et comment mesurer ce que ça vous rapporte.
-            </p>
-
-            <h2>Qu'est-ce que l'automatisation des tâches, concrètement ?</h2>
-            <p>
-                Automatiser une tâche, c'est confier à un système le soin de l'exécuter à votre place, selon des règles que vous définissez une fois pour toutes. L'exemple le plus parlant : au lieu de surveiller manuellement quels devis n'ont pas reçu de réponse, un système le fait pour vous et envoie une relance polie au bout de trois jours — sans que vous ayez à y penser.
-            </p>
-            <p>
-                L'automatisation moderne ne remplace pas vos outils. Elle les <strong>connecte</strong>. Votre boîte mail, votre logiciel de facturation, votre agenda, votre tableur : au lieu de fonctionner en silos qui vous obligent à faire le lien manuellement, ils communiquent entre eux. L'information circule toute seule.
-            </p>
-
-            <h2>Quelles tâches automatiser en priorité ?</h2>
-            <p>
-                Toutes les tâches ne se valent pas pour démarrer. Les meilleures candidates partagent trois caractéristiques : elles sont <strong>fréquentes</strong>, <strong>répétitives</strong>, et suivent des <strong>règles claires</strong>. Voici les familles les plus rentables à automatiser dans une petite entreprise.
-            </p>
-
-            <h3>Les devis et les relances commerciales</h3>
-            <p>
-                Générer un devis, l'envoyer, suivre s'il a été ouvert, relancer en l'absence de réponse : tout ce cycle peut être automatisé. C'est souvent la première automatisation qui change la vie d'un dirigeant, car elle touche directement au chiffre d'affaires.
-                <!-- MAILLAGE : activer quand l'article secondaire sera publié -->
-                <!-- <a href="https://expia.fr/blog/automatiser-devis-relances.html">Voir notre guide dédié : automatiser ses devis et relances</a>. -->
-            </p>
-
-            <h3>Les e-mails et messages récurrents</h3>
-            <p>
-                Répondre aux mêmes questions, confirmer des rendez-vous, accuser réception d'une demande : ces échanges suivent presque toujours le même schéma. Ils peuvent être pré-rédigés, triés automatiquement, ou même rédigés par une IA qui s'adapte au contexte du message.
-                <!-- <a href="https://expia.fr/blog/automatiser-emails-relation-client.html">Voir : automatiser la gestion des e-mails et de la relation client</a>. -->
-            </p>
-
-            <h3>La saisie et le classement de documents</h3>
-            <p>
-                Recopier des données d'un endroit à un autre, classer des pièces jointes, mettre à jour une base : c'est le travail invisible qui grignote des heures sans qu'on s'en aperçoive. C'est aussi le plus simple à automatiser, car les règles y sont souvent évidentes.
-                <!-- <a href="https://expia.fr/blog/5-taches-administratives-a-automatiser.html">Voir : 5 tâches administratives que toute petite entreprise devrait automatiser</a>. -->
-            </p>
-
-            <h2>Comment fonctionne une automatisation ?</h2>
-            <p>
-                Le principe est toujours le même : un <strong>déclencheur</strong> (un nouvel e-mail, un formulaire rempli, une date qui arrive), suivi d'une <strong>série d'actions</strong> (créer un document, envoyer un message, mettre à jour une fiche). Entre les deux, des outils comme <strong>n8n</strong> orchestrent le tout en se branchant sur vos logiciels existants, sans avoir à les remplacer.
-                <!-- <a href="https://expia.fr/blog/automatisation-n8n-concret.html">Voir : l'automatisation avec n8n, ce que ça change concrètement</a>. -->
-            </p>
-            <p>
-                C'est là qu'intervient l'<strong>IA générative</strong>. Elle ajoute une couche de « jugement » à l'automatisation : rédiger une réponse adaptée plutôt qu'un texte figé, résumer un long message, trier une demande selon son urgence, qualifier un prospect. Des tâches qui exigeaient un cerveau humain et qui peuvent désormais être déléguées en partie. C'est la différence entre une simple automatisation et un véritable <strong>agent IA</strong>, capable de prendre des micro-décisions.
-            </p>
-
-            <h2>Par où commencer : la méthode en 4 étapes</h2>
-            <p>
-                Inutile de tout automatiser d'un coup — c'est l'erreur la plus courante, et celle qui fait échouer les projets. La bonne approche est progressive.
-            </p>
-            <h3>1. Observer</h3>
-            <p>
-                Pendant une semaine, notez les tâches que vous refaites à l'identique. Vous verrez vite revenir les mêmes coupables.
-            </p>
-            <h3>2. Choisir une seule tâche</h3>
-            <p>
-                Celle qui vous pèse le plus ou revient le plus souvent. Une victoire concrète vaut mieux qu'un grand chantier qui n'aboutit jamais.
-            </p>
-            <h3>3. Connecter vos outils</h3>
-            <p>
-                On crée les « ponts » entre vos logiciels pour que l'information circule sans copier-coller. Vous gardez vos outils, ils se mettent à coopérer.
-            </p>
-            <h3>4. Mesurer le temps gagné</h3>
-            <p>
-                Une automatisation utile se mesure : combien d'heures par semaine vous a-t-elle rendues ? C'est ce chiffre qui justifie d'aller plus loin.
-            </p>
-
-            <h2>Combien de temps (et d'argent) peut-on gagner ?</h2>
-            <p>
-                Une seule automatisation bien choisie fait souvent gagner <strong>2 à 5 heures par semaine</strong>. Sur une année, c'est plus de 100 heures récupérées — sans embaucher. Au-delà du temps, l'automatisation réduit les oublis (une relance n'est jamais ratée), accélère vos réponses clients, et fiabilise vos processus. Pour savoir si le jeu en vaut la chandelle dans votre cas précis, un <strong>audit</strong> de vos processus permet d'identifier les gisements de temps les plus rentables.
-                <!-- MAILLAGE inter-silo (vers pilier Audit, à activer) -->
-                <!-- <a href="https://expia.fr/blog/audit-ia-entreprise.html">Voir : l'audit IA, identifier ce qui peut être automatisé chez vous</a>. -->
-            </p>
-
-            <h2>Faut-il se faire accompagner ?</h2>
-            <p>
-                Vous pouvez tout à fait bricoler une première automatisation seul, et c'est une excellente façon de commencer. Mais faire appel à quelqu'un qui maîtrise ces outils permet d'aller plus vite, d'éviter les pièges classiques, et de concevoir des systèmes fiables qui tiennent dans le temps. EXPIA, basée à Férel, accompagne les TPE, PME et indépendants du sud Morbihan et de la presqu'île guérandaise, sur place ou en visio selon ce qui vous arrange.
-            </p>
-
-            <!-- ===== FAQ ===== -->
-            <h2>Questions fréquentes</h2>
-
-            <div class="faq-block">
-                <p><strong>Qu'est-ce que l'automatisation des tâches en entreprise ?</strong></p>
-                <p>
-                    L'automatisation des tâches consiste à confier à un système les actions répétitives que vous réalisez manuellement : relances, devis, classement, mises à jour. L'objectif est de libérer du temps sur les tâches à faible valeur pour le réinvestir dans votre métier.
-                </p>
-
-                <p><strong>Quelles tâches une TPE ou PME peut-elle automatiser en premier ?</strong></p>
-                <p>
-                    Les tâches fréquentes, répétitives et à règles claires : relances de devis, confirmations de rendez-vous, réponses aux questions récurrentes, saisie de documents. Mieux vaut commencer par une seule, celle qui vous fait perdre le plus de temps.
-                </p>
-
-                <p><strong>Faut-il savoir coder pour automatiser son entreprise ?</strong></p>
-                <p>
-                    Non. Les outils modernes comme n8n connectent vos logiciels existants sans développement lourd. EXPIA conçoit le système pour vous ; vous n'avez qu'à l'utiliser.
-                </p>
-
-                <p><strong>Combien de temps peut-on gagner grâce à l'automatisation ?</strong></p>
-                <p>
-                    Une seule automatisation bien choisie fait souvent gagner 2 à 5 heures par semaine, soit plus de 100 heures sur l'année — sans embauche supplémentaire.
-                </p>
-            </div>
-
-            <!-- ===== Maillage : articles du silo (à activer au fur et à mesure) ===== -->
-            <p class="article-related">
-                À lire aussi, dans ce dossier :
-                <!-- Décommente chaque lien quand l'article correspondant est publié -->
-                <!-- <a href="https://expia.fr/blog/automatiser-devis-relances.html">Automatiser ses devis et relances</a> · -->
-                <!-- <a href="https://expia.fr/blog/5-taches-administratives-a-automatiser.html">5 tâches administratives à automatiser</a> · -->
-                <!-- <a href="https://expia.fr/blog/automatisation-n8n-concret.html">L'automatisation avec n8n, concrètement</a> -->
-                <a href="https://expia.fr/blog/automatisation-ia-la-roche-bernard-sud-morbihan.html">Automatisation &amp; IA : par où commencer dans le sud Morbihan</a>.
-            </p>
-
-        </div>
-
-        <!-- ===== CTA final ===== -->
-        <aside class="article-cta">
-            <h2>Envie de savoir ce qui peut être automatisé chez vous ?</h2>
-            <p>
-                Un premier échange suffit pour identifier la tâche la plus rentable à automatiser dans votre entreprise. Sans engagement.
-            </p>
-            <a href="https://expia.fr/index.html#contact" class="nav-cta">Demander un échange gratuit</a>
-        </aside>
-
-    </article>
-
-    <!-- ===== FOOTER (identique au gabarit) ===== -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <span class="nav-logo">EXPIA</span>
-                <p>L'excellence en intelligence artificielle pour les entreprises de demain.</p>
-            </div>
-            <div class="footer-links">
-                <a href="https://expia.fr/index.html">Accueil</a>
-                <a href="https://expia.fr/index.html#services">Services</a>
-                <a href="https://expia.fr/index.html#processus">Processus</a>
-                <a href="https://expia.fr/blog/index.html">Blog</a>
-                <a href="https://expia.fr/index.html#contact">Contact</a>
-            </div>
-        </div>
-        <div class="footer-bottom">© 2026 EXPIA. Tous droits réservés.</div>
-    </footer>
     <script defer src="/_vercel/insights/script.js"></script>
-
 </body>
 </html>
