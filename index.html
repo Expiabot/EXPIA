@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.classList.add('js');</script>
 
     <!-- ========== SEO ========== -->
-    <title>EXPIA — Agence Intelligence Artificielle | Automatisation & IA sur-mesure</title>
-    <meta name="description"
-        content="EXPIA, agence IA dans le Morbihan. Solutions d'IA sur-mesure : automatisation, IA générative, agents autonomes, audit et conseil. Réduisez vos coûts et accélérez votre croissance.">
+    <title>EXPIA · Automatisation IA pour artisans et TPE | Morbihan & Loire-Atlantique</title>
+    <meta name="description" content="Automatisez vos devis, relances et suivi chantier. EXPIA accompagne les artisans et TPE du Morbihan avec des solutions IA concrètes dès 397€.">
     <link rel="canonical" href="https://expia.fr/">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="EXPIA">
@@ -21,7 +21,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="EXPIA">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:title" content="EXPIA — Agence en Intelligence Artificielle">
+    <meta property="og:title" content="EXPIA · Agence en Intelligence Artificielle">
     <meta property="og:description"
         content="Solutions d'IA sur-mesure : automatisation, IA générative, agents autonomes, audit et conseil. Propulsez votre entreprise avec l'intelligence artificielle.">
     <meta property="og:url" content="https://expia.fr/">
@@ -29,7 +29,7 @@
 
     <!-- ========== Twitter / X ========== -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="EXPIA — Agence en Intelligence Artificielle">
+    <meta name="twitter:title" content="EXPIA · Agence en Intelligence Artificielle">
     <meta name="twitter:description"
         content="Solutions d'IA sur-mesure : automatisation, IA générative, agents autonomes, audit et conseil.">
     <meta name="twitter:image" content="https://expia.fr/og-image.jpg">
@@ -41,6 +41,122 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <!-- ========== Structured Data (JSON-LD) ========== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://expia.fr/#business",
+          "name": "EXPIA",
+          "url": "https://expia.fr",
+          "logo": "https://expia.fr/favicon.png",
+          "image": "https://expia.fr/og-image.jpg",
+          "description": "Agence d'intelligence artificielle basée à Férel (Morbihan), spécialisée en automatisation IA pour artisans, TPE et PME de la presqu'île guérandaise et du sud Morbihan.",
+          "telephone": "+33695274474",
+          "email": "contact@expia.fr",
+          "founder": {
+            "@type": "Person",
+            "name": "Esteban Marteil"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Férel",
+            "addressLocality": "Férel",
+            "postalCode": "56130",
+            "addressRegion": "Morbihan",
+            "addressCountry": "FR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 47.4833,
+            "longitude": -2.3667
+          },
+          "areaServed": [
+            "Presqu'île guérandaise",
+            "Sud Morbihan",
+            "Loire-Atlantique",
+            "Férel",
+            "La Roche-Bernard",
+            "Guérande",
+            "La Baule",
+            "Herbignac",
+            "Muzillac",
+            "Vannes"
+          ],
+          "serviceType": [
+            "Automatisation IA",
+            "Agents IA",
+            "Agent vocal",
+            "CRM automatisé",
+            "Automatisation n8n"
+          ],
+          "priceRange": "€€",
+          "sameAs": [
+            "https://www.linkedin.com/company/expia-ia"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://expia.fr/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Que propose EXPIA ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EXPIA est une agence d'intelligence artificielle qui conçoit, développe et intègre des solutions d'IA sur-mesure : automatisation des processus, IA générative, agents autonomes, audit et conseil stratégique. Nous intervenons sur l'ensemble de la chaîne, de l'idée à la mise en production."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pour quelles entreprises travaillez-vous ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nous accompagnons les entreprises qui souhaitent adopter l'IA pour automatiser leurs processus, réduire leurs coûts et accélérer leur time-to-market. Nos solutions s'adaptent à vos outils existants (CRM, ERP, automatisations) sans bouleverser vos processus métier."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment se déroule un projet IA avec EXPIA ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le projet se déroule en 4 étapes : Découverte (analyse de vos besoins et de vos données), Conception (architecture et choix des modèles), Développement (implémentation, fine-tuning, tests) et Déploiement (mise en production, monitoring et maintenance évolutive)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelles technologies utilisez-vous ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nous travaillons avec les technologies de référence de l'écosystème IA : n8n pour l'orchestration et l'automatisation, les API OpenAI et Claude, le RAG et les bases vectorielles, ainsi que les intégrations à vos outils du quotidien (Airtable, Supabase, Slack, Telegram, Google Workspace, Microsoft 365)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Où se situe EXPIA ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EXPIA est basée à Férel, dans le sud Morbihan (Bretagne), et accompagne les entreprises de la presqu'île guérandaise et du Grand Ouest (La Roche-Bernard, Muzillac, Guérande, La Baule…), sur place ou en visio."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://expia.fr/#website",
+          "url": "https://expia.fr",
+          "name": "EXPIA",
+          "description": "Automatisation IA pour artisans et TPE · Morbihan & Loire-Atlantique",
+          "publisher": {
+            "@id": "https://expia.fr/#business"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
@@ -64,6 +180,7 @@
                 <a href="#processus">Processus</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
+                <a href="a-propos.html">À propos</a>
                 <a href="blog/">Blog</a>
             </nav>
             <a href="#contact" class="btn btn-outline">
@@ -129,7 +246,7 @@
                 </div>
 
                 <div class="bento-grid">
-                    <!-- Card 1 — Hero card, full width -->
+                    <!-- Card 1 - Hero card, full width -->
                     <div class="bento-card bento-hero reveal">
                         <div class="card-accent"></div>
                         <div class="card-icon">
@@ -303,7 +420,7 @@
                             </li>
                             <li>
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                                Férel (56) — sud Morbihan &amp; presqu'île guérandaise
+                                Férel (56), sud Morbihan &amp; presqu'île guérandaise
                             </li>
                         </ul>
                     </div>
@@ -403,7 +520,7 @@
                             </span>
                         </summary>
                         <div class="faq-answer">
-                            <p>EXPIA est basée à Férel, dans le sud Morbihan (Bretagne), et accompagne les entreprises de la presqu'île guérandaise et du Grand Ouest — La Roche-Bernard, Muzillac, Guérande, La Baule… — sur place ou en visio.</p>
+                            <p>EXPIA est basée à Férel, dans le sud Morbihan (Bretagne), et accompagne les entreprises de la presqu'île guérandaise et du Grand Ouest (La Roche-Bernard, Muzillac, Guérande, La Baule…), sur place ou en visio.</p>
                         </div>
                     </details>
                 </div>
@@ -424,6 +541,7 @@
                 <a href="#processus">Processus</a>
                 <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
+                <a href="a-propos.html">À propos</a>
                 <a href="blog/">Blog</a>
                 <a href="mentions-legales.html">Mentions légales</a>
             </nav>
@@ -528,7 +646,7 @@
     }
     </script>
 
-    <!-- 3. FAQ — fort levier pour citations IA et rich snippets Google -->
+    <!-- 3. FAQ - fort levier pour citations IA et rich snippets Google -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -571,7 +689,7 @@
           "name": "Où se situe EXPIA ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "EXPIA est basée à Férel, dans le sud Morbihan (Bretagne), et accompagne les entreprises de la presqu'île guérandaise et du Grand Ouest — La Roche-Bernard, Muzillac, Guérande, La Baule… — sur place ou en visio."
+            "text": "EXPIA est basée à Férel, dans le sud Morbihan (Bretagne), et accompagne les entreprises de la presqu'île guérandaise et du Grand Ouest (La Roche-Bernard, Muzillac, Guérande, La Baule…), sur place ou en visio."
           }
         }
       ]

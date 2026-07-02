@@ -1,0 +1,15 @@
+# Réglages locaux Claude Code (chemins/permissions propres à la machine)
+.claude/
+
+# Skills tiers (installés hors projet — voir C:\Users\emart\Desktop\cyber-skills)
+.agents/
+skills-lock.json
+install*.log
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+*.swp
+
+# Dépendances éventuelles
+node_modules/

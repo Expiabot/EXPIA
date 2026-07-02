@@ -973,21 +973,24 @@ footer {
 }
 
 /* ================= SCROLL REVEAL ================= */
-.reveal {
+/* Progressive enhancement : le contenu est visible par défaut.
+   L'animation d'apparition ne s'active que si JavaScript est disponible
+   (classe .js ajoutée sur <html>). Sans JS, tout reste affiché. */
+html.js .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.9s var(--ease-out);
 }
 
-.reveal.visible {
+html.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Stagger children */
-.reveal:nth-child(2) { transition-delay: 0.1s; }
-.reveal:nth-child(3) { transition-delay: 0.2s; }
-.reveal:nth-child(4) { transition-delay: 0.3s; }
+html.js .reveal:nth-child(2) { transition-delay: 0.1s; }
+html.js .reveal:nth-child(3) { transition-delay: 0.2s; }
+html.js .reveal:nth-child(4) { transition-delay: 0.3s; }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
