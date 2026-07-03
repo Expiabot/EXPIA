@@ -23,8 +23,9 @@ concrète du savoir-faire IA de l'agence auprès des visiteurs.
 3. **Objectif business** : capture de contact. Quand le visiteur pose une vraie
    question projet, l'assistant propose de laisser nom + email/téléphone.
 4. **Moteur** : API Claude, modèle **Haiku 4.5** (`claude-haiku-4-5`).
-5. **Livraison des leads** : email vers `esteban@expia.fr` via **Resend**
-   (offre gratuite ; domaine `expia.fr` vérifié, envoi depuis `noreply@expia.fr`).
+5. **Livraison des leads** : email vers `esteban@expia.fr` via **Mailjet**
+   (compte existant du propriétaire ; offre gratuite ; adresse/domaine `expia.fr`
+   validé, envoi depuis `noreply@expia.fr`).
 6. **Style visuel** : fenêtre blanche épurée qui contraste sur le fond sombre du
    site, accents en dégradé bleu-violet.
 7. **Bouton d'appel** : pilule « Discuter avec l'assistant » en bas à droite.
@@ -38,7 +39,7 @@ il passe par les fonctions, qui seules détiennent les secrets.
 ```
 Visiteur (widget) ──> /api/chat (Vercel) ──> API Claude (Haiku 4.5)
                             │
-                            └──> /api/lead (Vercel) ──> Resend ──> esteban@expia.fr
+                            └──> /api/lead (Vercel) ──> Mailjet ──> esteban@expia.fr
 ```
 
 ### Composants
@@ -47,7 +48,7 @@ Visiteur (widget) ──> /api/chat (Vercel) ──> API Claude (Haiku 4.5)
 |---|---|---|
 | `chat-widget.js` + CSS | Widget front-end autonome, chargé en une ligne dans les pages | Aucune (vanilla JS) |
 | `/api/chat` | Proxy vers l'API Claude ; détient `ANTHROPIC_API_KEY` ; applique le system prompt et les garde-fous | SDK `@anthropic-ai/sdk` |
-| `/api/lead` | Reçoit un lead et envoie l'email via Resend ; détient `RESEND_API_KEY` | SDK `resend` |
+| `/api/lead` | Reçoit un lead et envoie l'email via Mailjet ; détient `MAILJET_API_KEY` + `MAILJET_SECRET_KEY` | SDK `node-mailjet` |
 
 ### Widget (`chat-widget.js`)
 
@@ -86,7 +87,7 @@ côté serveur. À chaque appel `/api/chat`, le widget renvoie l'historique born
 
 - Reçoit `{ name, contact, message? }` (contact = email ou téléphone).
 - Valide les champs (présence, format email basique, longueurs plafonnées).
-- Envoie un email via Resend depuis `noreply@expia.fr` vers `esteban@expia.fr`,
+- Envoie un email via Mailjet depuis `noreply@expia.fr` vers `esteban@expia.fr`,
   contenant le nom, le moyen de contact, et éventuellement le contexte de la
   conversation.
 - Renvoie un statut succès/erreur au widget.
@@ -101,13 +102,14 @@ côté serveur. À chaque appel `/api/chat`, le widget renvoie l'historique born
 5. Quand l'assistant propose le recontact et que le visiteur accepte, le widget
    affiche le mini-formulaire.
 6. Visiteur remplit nom + contact, coche/accepte le consentement.
-7. Widget POST `/api/lead` → Resend → email à `esteban@expia.fr`.
+7. Widget POST `/api/lead` → Mailjet → email à `esteban@expia.fr`.
 8. Widget affiche une confirmation.
 
 ## Sécurité, coûts et RGPD
 
-- **Secrets** : `ANTHROPIC_API_KEY` et `RESEND_API_KEY` uniquement dans les
-  variables d'environnement Vercel. Jamais dans le code livré au navigateur.
+- **Secrets** : `ANTHROPIC_API_KEY`, `MAILJET_API_KEY` et `MAILJET_SECRET_KEY`
+  uniquement dans les variables d'environnement Vercel. Jamais dans le code livré
+  au navigateur.
 - **Anti-abus** (`/api/chat` et `/api/lead` sont publics) :
   - Limitation du débit par visiteur (ex. quelques messages par minute, par IP).
   - Longueur de message entrant plafonnée.
@@ -126,8 +128,8 @@ côté serveur. À chaque appel `/api/chat`, le widget renvoie l'historique born
 - **`/api/chat`** : en cas d'erreur API Claude (rate limit, panne), renvoyer un
   message d'erreur propre ; le widget affiche « Désolé, une erreur est survenue,
   réessayez dans un instant » et propose le contact direct (email) en secours.
-- **`/api/lead`** : en cas d'échec Resend, renvoyer une erreur claire ; le widget
-  invite le visiteur à écrire directement à l'adresse de contact.
+- **`/api/lead`** : en cas d'échec Mailjet, renvoyer une erreur claire ; le
+  widget invite le visiteur à écrire directement à l'adresse de contact.
 - **Validation** : entrées invalides (message vide, email malformé) rejetées
   côté fonction avec un code 400 et un message exploitable par le widget.
 - **Réseau côté widget** : timeouts et échecs gérés avec un message de repli, pas
@@ -144,5 +146,6 @@ côté serveur. À chaque appel `/api/chat`, le widget renvoie l'historique born
 
 - Créer une clé API Anthropic et l'ajouter comme `ANTHROPIC_API_KEY` sur Vercel,
   avec un petit budget.
-- Créer un compte Resend, vérifier le domaine `expia.fr`, générer une clé et
-  l'ajouter comme `RESEND_API_KEY` sur Vercel.
+- Dans le compte Mailjet existant : valider l'adresse/domaine expéditeur
+  (`noreply@expia.fr`), récupérer la clé API et la clé secrète, et les ajouter
+  comme `MAILJET_API_KEY` et `MAILJET_SECRET_KEY` sur Vercel.
