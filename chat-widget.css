@@ -1,5 +1,9 @@
 #expia-chat { position: fixed; bottom: 20px; right: 20px; z-index: 9999; font-family: system-ui, -apple-system, sans-serif; }
 
+/* Les règles #id { display: … } ci-dessous priment sur le [hidden] de l'agent
+   utilisateur : on rétablit explicitement le masquage quand l'attribut est posé. */
+#expia-launcher[hidden], #expia-panel[hidden] { display: none; }
+
 #expia-launcher {
   display: flex; align-items: center; gap: 8px;
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
