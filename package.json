@@ -1,0 +1,13 @@
+{
+  "name": "expia-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.110.0",
+    "node-mailjet": "^6.0.11"
+  }
+}
