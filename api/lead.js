@@ -13,7 +13,7 @@ async function sendMail(lead) {
   await mailjet.post('send', { version: 'v3.1' }).request({
     Messages: [
       {
-        From: { Email: 'noreply@expia.fr', Name: 'Assistant EXPIA' },
+        From: { Email: 'contact@expia.fr', Name: 'Assistant EXPIA' },
         To: [{ Email: 'esteban@expia.fr', Name: 'Esteban' }],
         Subject: `Nouveau contact chatbot — ${lead.name}`,
         TextPart:
