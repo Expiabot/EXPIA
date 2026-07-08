@@ -1,0 +1,43 @@
+#expia-chat { position: fixed; bottom: 20px; right: 20px; z-index: 9999; font-family: system-ui, -apple-system, sans-serif; }
+
+#expia-launcher {
+  display: flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: #fff; font-size: 14px; font-weight: 600; border: none;
+  padding: 12px 18px; border-radius: 30px; cursor: pointer;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.45);
+}
+
+#expia-panel {
+  width: 340px; max-width: calc(100vw - 40px); height: 480px; max-height: calc(100vh - 40px);
+  display: flex; flex-direction: column; overflow: hidden;
+  background: #fff; border-radius: 16px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+#expia-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 14px; border-bottom: 1px solid #eef0f4; background: #fff;
+}
+.expia-head-info strong { display: block; font-size: 14px; color: #0f172a; }
+.expia-head-info span { font-size: 11px; color: #22c55e; }
+.expia-head-actions { display: flex; align-items: center; gap: 6px; }
+#expia-lead-btn { background: #f1f3f6; border: none; border-radius: 16px; padding: 6px 10px; font-size: 11px; cursor: pointer; color: #334155; }
+#expia-close { background: none; border: none; font-size: 16px; cursor: pointer; color: #94a3b8; }
+
+#expia-messages { flex: 1; overflow-y: auto; padding: 12px; display: flex; flex-direction: column; gap: 8px; background: #f7f8fa; }
+.expia-msg { max-width: 82%; padding: 8px 11px; font-size: 13px; line-height: 1.4; border-radius: 12px; white-space: pre-wrap; }
+.expia-msg.bot { align-self: flex-start; background: #fff; color: #1e293b; border: 1px solid #eef0f4; border-bottom-left-radius: 3px; }
+.expia-msg.user { align-self: flex-end; background: #3b82f6; color: #fff; border-bottom-right-radius: 3px; }
+
+.expia-suggestions { display: flex; flex-wrap: wrap; gap: 6px; }
+.expia-suggestions button { background: #fff; border: 1px solid #dbe2ea; color: #334155; font-size: 12px; padding: 6px 10px; border-radius: 16px; cursor: pointer; }
+
+#expia-form { display: flex; gap: 6px; align-items: center; padding: 8px 10px; border-top: 1px solid #eef0f4; background: #fff; }
+#expia-input { flex: 1; border: 1px solid #dbe2ea; border-radius: 20px; padding: 8px 12px; font-size: 13px; outline: none; }
+#expia-form button[type="submit"] { width: 34px; height: 34px; border-radius: 50%; border: none; background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; cursor: pointer; }
+
+.expia-lead-form { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1px solid #eef0f4; border-radius: 12px; padding: 10px; }
+.expia-lead-form input { border: 1px solid #dbe2ea; border-radius: 8px; padding: 7px 9px; font-size: 13px; }
+.expia-lead-form label { font-size: 11px; color: #64748b; display: flex; gap: 6px; align-items: flex-start; }
+.expia-lead-form button { background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: #fff; border: none; border-radius: 8px; padding: 8px; font-size: 13px; cursor: pointer; }
+.expia-lead-form a { color: #3b82f6; }
