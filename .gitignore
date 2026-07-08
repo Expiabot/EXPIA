@@ -13,3 +13,6 @@ Thumbs.db
 
 # Dépendances éventuelles
 node_modules/
+
+# Superpowers brainstorm scratch
+.superpowers/
