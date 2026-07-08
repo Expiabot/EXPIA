@@ -16,3 +16,10 @@ node_modules/
 
 # Superpowers brainstorm scratch
 .superpowers/
+
+# Variables d'environnement et lockfile
+.env
+package-lock.json
+
+.vercel
+.env*
