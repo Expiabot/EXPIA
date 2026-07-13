@@ -70,6 +70,12 @@ function main() {
       prompt: 'consent',
     }).toString();
 
+  // Ferme proprement (reponse flushee puis serveur ferme) avant de quitter,
+  // pour eviter l'assertion libuv sur Windows quand on exit trop tot.
+  const finish = (res, code) => {
+    server.close(() => process.exit(code));
+  };
+
   const server = createServer(async (req, res) => {
     if (!req.url.startsWith('/oath2callback')) {
       res.writeHead(404).end('Not found');
@@ -79,11 +85,10 @@ function main() {
     const code = url.searchParams.get('code');
     const error = url.searchParams.get('error');
     if (error) {
-      res.writeHead(400, { 'Content-Type': 'text/html; charset=utf-8' })
-        .end(`<h1>Echec du consentement</h1><p>${error}</p>`);
       console.error(`Consentement refuse: ${error}`);
-      server.close();
-      process.exit(1);
+      res.writeHead(400, { 'Content-Type': 'text/html; charset=utf-8' })
+        .end(`<h1>Echec du consentement</h1><p>${error}</p>`, () => finish(res, 1));
+      return;
     }
     try {
       const tokens = await exchangeCode(code, creds);
@@ -94,19 +99,16 @@ function main() {
         TOKEN_FILE,
         JSON.stringify({ refresh_token: tokens.refresh_token, scope: SCOPE, saved_at: new Date().toISOString() }, null, 2)
       );
-      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }).end(
-        '<h1>Autorisation reussie</h1><p>Tu peux fermer cet onglet et revenir au terminal.</p>'
-      );
       console.log(`\nOK. Refresh token enregistre dans ${TOKEN_FILE}`);
       console.log('Tu peux maintenant lancer : npm run index-ping -- <url>');
-      server.close();
-      process.exit(0);
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' }).end(
+        '<h1>Autorisation reussie</h1><p>Tu peux fermer cet onglet et revenir au terminal.</p>',
+        () => finish(res, 0)
+      );
     } catch (e) {
-      res.writeHead(500, { 'Content-Type': 'text/html; charset=utf-8' })
-        .end(`<h1>Erreur</h1><pre>${e.message}</pre>`);
       console.error(`Echec: ${e.message}`);
-      server.close();
-      process.exit(1);
+      res.writeHead(500, { 'Content-Type': 'text/html; charset=utf-8' })
+        .end(`<h1>Erreur</h1><pre>${e.message}</pre>`, () => finish(res, 1));
     }
   });
 
