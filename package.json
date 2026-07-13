@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test",
+    "oauth-setup-indexing": "node scripts/oauth-setup-indexing.mjs",
     "index-ping": "node scripts/ping-indexing.mjs"
   },
   "dependencies": {

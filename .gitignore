@@ -27,3 +27,6 @@ package-lock.json
 # Cle du compte de service Google (Indexing API) : ne jamais committer
 gcp-indexing-sa.json
 *-sa.json
+
+# Jeton OAuth pour l'Indexing API (refresh token) : ne jamais committer
+.gsc-indexing-token.json
