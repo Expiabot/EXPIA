@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "index-ping": "node scripts/ping-indexing.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.110.0",
