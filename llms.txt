@@ -1,23 +1,20 @@
 # EXPIA
-
-> EXPIA est une agence française spécialisée en intelligence artificielle, basée dans le Morbihan (Bretagne). EXPIA conçoit, développe et intègre des solutions d'IA sur-mesure pour les entreprises : automatisation des processus, IA générative, analyse prédictive, audit et conseil.
+> Agence d'intelligence artificielle basée à Férel (56), Morbihan. Automatisation IA (n8n, Claude/OpenAI, RAG) pour artisans et TPE : tri d'emails, relances devis/factures, standard téléphonique automatisé, intégration CRM/ERP.
 
 ## Services
+- Automatisation & IA générative : chatbots, assistants intelligents, workflows n8n sur-mesure
+- Audit & conseil en IA : cartographie des processus, feuille de route d'adoption
+- Intégration sur-mesure : connexion aux outils existants (CRM, ERP, Airtable, Supabase, Slack, Google Workspace, Microsoft 365)
 
-- **Automatisation & IA Générative** : agents autonomes, LLMs personnalisés, pipelines RAG, automatisation de workflows complexes (n8n sur-mesure), chatbots et assistants intelligents, génération de contenu automatisée. Objectif : réduire les coûts et accélérer le time-to-market.
-- **Audit & Conseil en IA** : audit des processus, identification des gisements de productivité, feuille de route stratégique pour une adoption réussie de l'IA.
-- **Intégration & Solutions Sur Mesure** : intégration de l'IA aux outils existants (CRM, ERP, automatisations) sans bouleverser les processus métier.
+## Zone d'intervention
+Férel, sud Morbihan et presqu'île guérandaise (La Roche-Bernard, Muzillac, Guérande, La Baule, Herbignac), Grand Ouest — sur place ou en visio.
 
-## Méthodologie
-
-Processus en 4 étapes : Découverte (analyse des besoins et données) → Conception (architecture et choix des modèles) → Développement (implémentation, fine-tuning, tests) → Déploiement (mise en production, monitoring, maintenance).
-
-## Technologies
-
-OpenAI, LangChain, Hugging Face, PyTorch, TensorFlow, Pinecone, LlamaIndex, n8n, Docker, Python, RAG, Agents IA, Fine-Tuning, Vector DBs, Stable Diffusion, TypeScript, Kubernetes.
+## Ressources
+- Faut-il un chatbot sur le site web de votre TPE ? — https://expia.fr/blog/chatbot-site-web-tpe.html
+- Un agent IA, c'est quoi au juste ? — https://expia.fr/blog/agent-ia-c-est-quoi-artisan-tpe.html
+- Automatisation des tâches pour TPE et PME : par où commencer — https://expia.fr/blog/automatisation-taches-tpe-pme.html
+- Automatisation & IA dans le sud Morbihan — https://expia.fr/blog/automatisation-ia-la-roche-bernard-sud-morbihan.html
+- L'IA pour les entreprises de la presqu'île guérandaise — https://expia.fr/blog/agence-ia-presquile-guerandaise.html
 
 ## Contact
-
-- Site : https://expia.fr
-- Localisation : Morbihan, France
-- Réponse sous 48h ouvrées via le formulaire de contact.
+https://expia.fr/#contact — 06 95 27 44 74
