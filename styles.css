@@ -297,6 +297,9 @@ h1, h2, h3, h4, .logo {
   gap: 2.5rem;
 }
 
+/* Bouton d'appel : visible uniquement sur mobile (voir media queries) */
+.nav-phone { display: none; }
+
 .nav-links a {
   color: var(--text-secondary);
   text-decoration: none;
@@ -1020,6 +1023,13 @@ html.js .reveal:nth-child(4) { transition-delay: 0.3s; }
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
+  .nav-phone {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: 0.75rem;
+    min-height: 48px;
+    padding: 0.75rem 1.1rem;
+  }
 
   .hero-title { font-size: 2.4rem; }
   .section-title { font-size: 2rem; }
@@ -1148,5 +1158,6 @@ html.js .reveal:nth-child(4) { transition-delay: 0.3s; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .btn-outline.nav-btn { display: none; }
+  .nav-phone { margin-right: 0; }
 }
 
