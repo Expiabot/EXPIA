@@ -3,7 +3,8 @@
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/blog/index.html", "destination": "/blog/", "permanent": true },
     { "source": "/blog", "destination": "/blog/", "permanent": true },
-    { "source": "/blog/agence-ia-presquile-guerandaise.html", "destination": "/agence-ia-presquile-guerandaise.html", "permanent": true }
+    { "source": "/blog/agence-ia-presquile-guerandaise.html", "destination": "/agence-ia-presquile-guerandaise.html", "permanent": true },
+    { "source": "/blog/automatisation-ia-la-roche-bernard-sud-morbihan.html", "destination": "/agence-ia-la-roche-bernard.html", "permanent": true }
   ],
   "headers": [
     {
