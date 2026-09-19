@@ -44,12 +44,13 @@ présence dans la carte Google, pas de générer un gros trafic.
 | Saint-Nazaire – Brière | `/agence-ia-saint-nazaire.html` | agence IA Saint-Nazaire | Saint-Nazaire, Montoir-de-Bretagne, Trignac, Saint-André-des-Eaux, La Chapelle-des-Marais |
 
 URLs à la racine, en `.html`, comme `a-propos.html` et `mentions-legales.html`.
+Chaque page ajoutée au sitemap ; l'URL d'un article redirigé en est retirée.
 
 ### Articles de blog existants
 
-- `/blog/agence-ia-presquile-guerandaise.html` → 301 vers
+- `/blog/agence-ia-presquile-guerandaise.html` → redirection permanente (308) vers
   `/agence-ia-presquile-guerandaise.html`
-- `/blog/automatisation-ia-la-roche-bernard-sud-morbihan.html` → 301 vers
+- `/blog/automatisation-ia-la-roche-bernard-sud-morbihan.html` → redirection permanente (308) vers
   `/agence-ia-la-roche-bernard.html`
 
 Les fichiers d'article ne sont pas supprimés dans la PR de la page (contenu
@@ -144,12 +145,13 @@ mobile et du sitemap corrigé.
 
 | Ticket | PR | Fichiers |
 |---|---|---|
-| S-006 | Page Presqu'île guérandaise + 301 de l'article | page, `sitemap.xml`, `vercel.json` |
-| S-007 | Page Pays de la Roche-Bernard + 301 de l'article | page, `sitemap.xml`, `vercel.json` |
+| S-006 | Page Presqu'île guérandaise + redirection de l'article | page, `sitemap.xml`, `vercel.json` |
+| S-007 | Page Pays de la Roche-Bernard + redirection de l'article | page, `sitemap.xml`, `vercel.json` |
 | S-008 | Page Saint-Nazaire – Brière | page, `sitemap.xml` |
 | S-009 | Page Muzillac – Vannes | page, `sitemap.xml` |
 | S-010 | Maillage : bloc « Zones d'intervention » dans le corps et le pied de page de l'accueil, retrait des 2 articles de la liste du blog | `index.html`, `blog/index.html` |
 | S-011 | `llms.txt` : pages de zone à la place des 2 articles | `llms.txt` |
+| S-012 | Liens retour : chaque page de zone lie les 3 autres (une page ne peut lier que les zones déjà publiées au moment de sa PR) | les 3 premières pages de zone |
 
 Branches : `seo/S-00X-<slug>`. Une PR par ticket, mergée par Esteban.
 
@@ -161,7 +163,7 @@ Branches : `seo/S-00X-<slug>`. Une PR par ticket, mergée par Esteban.
 - Tous les liens internes de la page répondent 200 (en local).
 - **Unicité** : similarité textuelle avec chaque page de zone déjà écrite
   < 40 % (chevauchement de 5-grammes) ; au-delà, réécriture.
-- Sur la preview Vercel : redirection 301 des articles (S-006, S-007),
+- Sur la preview Vercel : redirection permanente des articles (S-006, S-007),
   aucune erreur console.
 
 ## Mesure du résultat

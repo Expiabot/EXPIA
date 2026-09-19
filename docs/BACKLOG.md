@@ -43,7 +43,7 @@ ni extrapolé.
 ## S-005 — Pages métier/ville
 **Priorité** : basse
 **Statut** : réactivé le 19/09/2026 par Esteban, sous forme de 4 pages
-de zone (voir S-006 à S-011) — pas de pages métier × ville
+de zone (voir S-006 à S-012) — pas de pages métier × ville
 **Note** : écarté à l'origine pour volume de recherche insuffisant. Le
 volume reste faible ; l'audit SEO du 19/09 montre qu'aucune agence IA
 ne se classe sur « agence IA La Baule Guérande ». Pages ville
@@ -54,14 +54,14 @@ individuelles : seulement quand un vrai client existe dans la ville.
 **Priorité** : 5
 **Statut** : à faire — bloqué par le merge des PR #9 à #13
 **Fichiers** : agence-ia-presquile-guerandaise.html, sitemap.xml, vercel.json
-**Critères d'acceptation** : voir la spec ; 301 depuis
+**Critères d'acceptation** : voir la spec ; redirection permanente depuis
 /blog/agence-ia-presquile-guerandaise.html ; faits locaux sourcés dans la PR
 
 ## S-007 — Page de zone Pays de la Roche-Bernard
 **Priorité** : 6
 **Statut** : bloqué par S-006
 **Fichiers** : agence-ia-la-roche-bernard.html, sitemap.xml, vercel.json
-**Critères d'acceptation** : voir la spec ; 301 depuis
+**Critères d'acceptation** : voir la spec ; redirection permanente depuis
 /blog/automatisation-ia-la-roche-bernard-sud-morbihan.html
 
 ## S-008 — Page de zone Saint-Nazaire – Brière
@@ -85,3 +85,10 @@ pied de page) ; retrait des 2 articles redirigés de la liste du blog
 **Priorité** : 10
 **Statut** : bloqué par S-010
 **Fichiers** : llms.txt (fichier protégé — ticket explicite)
+
+## S-012 — Liens retour entre pages de zone
+**Priorité** : 11
+**Statut** : bloqué par S-011
+**Fichiers** : agence-ia-presquile-guerandaise.html, agence-ia-la-roche-bernard.html,
+agence-ia-saint-nazaire.html
+**Description** : chaque page de zone lie les 3 autres
