@@ -92,3 +92,13 @@ pied de page) ; retrait des 2 articles redirigés de la liste du blog
 **Fichiers** : agence-ia-presquile-guerandaise.html, agence-ia-la-roche-bernard.html,
 agence-ia-saint-nazaire.html
 **Description** : chaque page de zone lie les 3 autres
+
+## S-013 — Fiche Google Business Profile dans le JSON-LD
+**Priorité** : 12
+**Statut** : à faire
+**Fichiers** : index.html (bloc JSON-LD protégé — ticket explicite)
+**Description** : la fiche GBP existe (confirmée par Esteban le 20/09).
+Ajout de openingHoursSpecification (lun-ven 9h-12h et 13h30-18h) et du
+lien Maps stable (cid) en hasMap et sameAs
+**Reste à faire hors dépôt** : obtenir 3 à 5 avis, vérifier la catégorie
+principale et les zones desservies de la fiche
