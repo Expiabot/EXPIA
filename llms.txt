@@ -7,14 +7,16 @@
 - Intégration sur-mesure : connexion aux outils existants (CRM, ERP, Airtable, Supabase, Slack, Google Workspace, Microsoft 365)
 
 ## Zone d'intervention
-Férel, sud Morbihan et presqu'île guérandaise (La Roche-Bernard, Muzillac, Guérande, La Baule, Herbignac), Grand Ouest — sur place ou en visio.
+Basé à Férel (56). Quatre secteurs, sur place ou en visio :
+- Presqu'île guérandaise (Guérande, La Baule, Le Croisic, Pornichet, La Turballe) — https://expia.fr/agence-ia-presquile-guerandaise.html
+- Pays de la Roche-Bernard (Férel, Pénestin, Nivillac, Herbignac, Saint-Lyphard) — https://expia.fr/agence-ia-la-roche-bernard.html
+- Saint-Nazaire et Brière (Saint-Nazaire, Montoir-de-Bretagne, Trignac, La Chapelle-des-Marais) — https://expia.fr/agence-ia-saint-nazaire.html
+- Muzillac et Vannes (Muzillac, Damgan, Ambon, Sarzeau, Theix-Noyalo, Vannes) — https://expia.fr/agence-ia-vannes-muzillac.html
 
 ## Ressources
 - Faut-il un chatbot sur le site web de votre TPE ? — https://expia.fr/blog/chatbot-site-web-tpe.html
 - Un agent IA, c'est quoi au juste ? — https://expia.fr/blog/agent-ia-c-est-quoi-artisan-tpe.html
 - Automatisation des tâches pour TPE et PME : par où commencer — https://expia.fr/blog/automatisation-taches-tpe-pme.html
-- Automatisation & IA dans le sud Morbihan — https://expia.fr/blog/automatisation-ia-la-roche-bernard-sud-morbihan.html
-- L'IA pour les entreprises de la presqu'île guérandaise — https://expia.fr/blog/agence-ia-presquile-guerandaise.html
 
 ## Contact
 https://expia.fr/#contact — 06 95 27 44 74
