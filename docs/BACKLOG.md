@@ -102,3 +102,17 @@ Ajout de openingHoursSpecification (lun-ven 9h-12h et 13h30-18h) et du
 lien Maps stable (cid) en hasMap et sameAs
 **Reste à faire hors dépôt** : obtenir 3 à 5 avis, vérifier la catégorie
 principale et les zones desservies de la fiche
+
+## S-015 — Offre création de site sur l'accueil
+**Priorité** : 13
+**Statut** : à faire
+**Fichiers** : index.html
+**Description** : 4e carte dans la section Services, angle « site qui
+ramène des demandes » (site + formulaire qui qualifie + assistant), et
+non « création de site web » générique, pour ne pas diluer le
+positionnement BTP.
+**Contraintes respectées** : aucun client cité (un site fait pour un
+proche, non rémunéré, et le site d'EXPIA), aucun prix affiché.
+**Suite possible** : page dédiée /site-internet-artisan-btp.html visant
+« création site internet artisan + ville », quand un premier client
+payant aura validé l'offre.
